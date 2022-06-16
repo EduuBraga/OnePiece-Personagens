@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes mover {
+    0% {left: 0px; right: 0px; }
+
+    35% {left: 10px;  right: 0px;}
+
+    65% {left: 10px; right: 0px;}
+
+    100%{left: 0px; right: 50px;}
+
+}
+
+:root {
+    --cor-principal: #004361;
+    --cor-secundaria: #00202e;
+    --cor-terciaria: #001621;
+}
+
+body {
+    background-color: var(--cor-principal);
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ====== Cabeçalho ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--cor-terciaria);
+}
+
+.logo {
+    width: 50px;
+    margin: 5px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* ===== Home ===== */
+.item1 {
+    grid-area: i1;
+}
+
+.item2 {
+    grid-area: i2;
+}
+
+.item3 {
+    grid-area: i3;
+}
+
+#home {
+    display: grid;
+    grid-template-areas: "i2 i1 i1"
+        "i2 i3 i3";
+    margin-top: 40px;
+}
+
+.animacao {
+    position: relative;
+    animation-name: mover;
+    animation-duration: 6s ;
+    animation-iteration-count: infinite;
+    width: 100px;
+    margin: 30px;
+}
+
+.titulo-home {
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+.artigo {
+    margin-right: 30px;
+}
+
+/* =====Personagens ===== */
+.img-pers {
+    grid-area: it1;
+}
+
+.des-pers {
+    grid-area: it2;
+}
+
+.lis-pers {
+    grid-area: it3;
+}
+
+#personagens {
+    margin-top: 40px;
+    background-color: var(--cor-secundaria);
+}
+
+.titulo-personagens {
+    text-align: center;
+    padding: 10px;
+}
+
+.para-personagens {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+/* ====Grid Personagens */
+.box-personagens {
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "it1 it1 it1 it1 it3"
+        "it1 it1 it1 it1 it3"
+        "it2 it2 it2 it2 it3"
+        "it2 it2 it2 it2 it3";
+    max-width: 750px;
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
+}
+
+.descricao-personagem {
+    padding: 10px;
+}
+
+.imagem-personagem {
+    width: 95%;
+    margin: 10px;
+}
+
+.lista-personagens {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.item-lista {
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    background-color: var(--cor-principal);
+    border: 2px solid #8BC5E0;
+}
+
+.item-lista:focus, .item-lista:active{
+    background-color: var(--cor-secundaria);
+    /* background-color: white; */
+    border-left: 0px solid white;
+}
+
+/* ==== Footer ===== */
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #8BC5E0;
+}
+
+.linkedin {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.linkedin:hover {
+    text-decoration: underline;
+}
+
+.linkedin::before {
+    content: "";
+    display: inline-block;
+    background-image: url(./imagens/linkedin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px 0px 5px;
+}
+
+.github::before {
+    content: "";
+    display: inline-block;
+    background-image: url(./imagens/github.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px 0px 5px;
+}
+
+.github {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+.github:hover {
+    text-decoration: underline;
+}
