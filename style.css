@@ -7,14 +7,10 @@
 }
 
 @keyframes mover {
-    0% {left: 0px; right: 0px; }
-
-    35% {left: 10px;  right: 0px;}
-
-    65% {left: 10px; right: 0px;}
-
-    100%{left: 0px; right: 50px;}
-
+    0% {left: 0px;right: 0px;}
+    35% {left: 10px;right: 0px;}
+    65% {left: 10px;right: 0px;}
+    100% {left: 0px;right: 50px;}
 }
 
 :root {
@@ -37,12 +33,17 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 2px solid var(--cor-terciaria);
+    border-bottom: 1px solid var(--cor-terciaria);
 }
 
 .logo {
     width: 50px;
     margin: 5px;
+}
+
+.nav>a {
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .nav {
@@ -51,17 +52,9 @@ section {
 }
 
 /* ===== Home ===== */
-.item1 {
-    grid-area: i1;
-}
-
-.item2 {
-    grid-area: i2;
-}
-
-.item3 {
-    grid-area: i3;
-}
+.item1 {grid-area: i1;}
+.item2 {grid-area: i2;}
+.item3 {grid-area: i3;}
 
 #home {
     display: grid;
@@ -73,7 +66,7 @@ section {
 .animacao {
     position: relative;
     animation-name: mover;
-    animation-duration: 6s ;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     width: 100px;
     margin: 30px;
@@ -90,17 +83,9 @@ section {
 }
 
 /* =====Personagens ===== */
-.img-pers {
-    grid-area: it1;
-}
-
-.des-pers {
-    grid-area: it2;
-}
-
-.lis-pers {
-    grid-area: it3;
-}
+.img-pers {grid-area: it1;}
+.des-pers {grid-area: it2;}
+.lis-pers {grid-area: it3;}
 
 #personagens {
     margin-top: 40px;
@@ -156,12 +141,13 @@ section {
     font-weight: 700;
     background-color: var(--cor-principal);
     border: 2px solid #8BC5E0;
+    transition-property: all;
+    transition-duration: 500ms;
 }
 
-.item-lista:focus, .item-lista:active{
+.item-lista:focus, .item-lista:active {
     background-color: var(--cor-secundaria);
-    /* background-color: white; */
-    border-left: 0px solid white;
+    border-left: 0px solid;
 }
 
 /* ==== Footer ===== */
@@ -169,17 +155,26 @@ section {
     margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
-    list-style-type: none;
+    background-color: #8BC5E0;
+    color: black;
+    font-weight: 700;
+}
+
+.footer>p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.midia {
     display: flex;
     justify-content: center;
-    background-color: #8BC5E0;
 }
 
 .linkedin {
     margin-right: 30px;
     text-decoration: none;
     color: black;
-    font-weight: 700;
 }
 
 .linkedin:hover {
@@ -210,10 +205,64 @@ section {
 
 .github {
     text-decoration: none;
-    font-weight: 700;
     color: black;
 }
 
 .github:hover {
     text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 350px) {
+
+    /* ====== Cabeçalho ===== */
+    .header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 40px;
+        margin: 5px;
+    }
+
+    .nav>a {
+        font-size: 15px;
+    }
+
+    .nav {
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    /* ===== Home ===== */
+    #home {
+        grid-template-areas:
+            "i2 i2 i1"
+            "i2 i2 i3";
+        background-image: url(./imagens/back.png);
+        background-size: cover;
+    }
+
+    .animacao {
+        display: none;
+    }
+
+    .titulo-home {
+        margin: 10px 0px 5px 0px;
+    }
+
+    .artigo {
+        padding-bottom: 10px;
+        margin-left: 30px;
+    }
+
+    /* ====Grid Personagens */
+    .lista-personagens {
+        margin-left: 5px;
+    }
+
+    .item-lista {
+        padding: 5px;
+    }
 }

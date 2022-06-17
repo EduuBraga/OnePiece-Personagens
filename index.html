@@ -6,48 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
-    <title>One piece Blog</title>
+    <script src="./js/index.js" defer></script>
+    <title>One piece - Personagens</title>
 </head>
 
 <body>
-
     <section>
-
         <header class="header">
             <img class="logo" src="./imagens/logo.png" alt="caveira chapeús de palha">
             <nav class="nav">
-                <a>Home</a>
-                <a>Personagens</a>
-                <a>Sobre</a>
+                <a href="#home">Home</a>
+                <a href="#personagens">Personagens</a>
+                <a href="#footer">Sobre</a>
             </nav>
         </header>
 
-        <main id="home">
+        <section id="home">
             <h2 class="titulo-home item1">Home</h2>
             <img class="animacao item2" src="./imagens/mugiwara.png" alt="imagem do luffy">
             <article class="artigo item3">One Piece conta as aventuras de Monkey D. Luffy, um jovem cujo corpo ganhou as
                 propriedades de borracha após ter comido uma fruta do diabo acidentalmente. Com sua tripulação, os
                 Piratas do Chapéu de Palha, Luffy explora a Grand Line em busca do tesouro mais procurado do mundo, o
                 "One Piece", a fim de se tornar o próximo Rei dos Piratas.</article>
-        </main>
+        </section>
 
         <section id="personagens">
-
             <h2 class="titulo-personagens">Personagens</h2>
             <p class="para-personagens">Dada a uma história tão grande, e considerando que o anime (e seu material de
                 origem do mangá) está avançando continuamente, descartando personagens antigos e introduzindo novos,
-                seria díficil listas todos no mundo de "One Piece". afinal, essa lista em expansiva de personagens
+                seria díficil listas todos no mundo de "One Piece". afinal, essa lista expansiva de personagens
                 inclui piratas problemáticos, aldeões estranhos, Homens-Peixe, gurreiros mutantes, reis, princesas e
-                fuzileiros da marinha. Por está razão que só irei listar os personagens principais do Bando dos Chapéus
+                fuzileiros da marinha. Por está razão que só irei listar os personagens principais do Bando do Chapéus
                 De Palha.</p>
-
             <div class="box-personagens">
-                <img class="imagem-personagem img-pers" src="./imagens/personagens/brook.jpg" alt="">
-                <p class="descricao-personagem des-pers">O personagem principal em um grande anime é quase sempre o
-                    personagem mais bem desenvolvido, e em “One Piece” não é exceção. Claro, Luffy pode ser estúpido e
-                    imprudente. Sim, ele não dá aos problemas sérios o respeito que eles merecem, e muitas vezes seu
-                    próprio descuido o coloca em situações complicadas. No entanto, seu coração inspira sua equipe e
-                    todos que se aliam a ele e aos Chapéus de Palha.</p>
+                <img class="imagem-personagem img-pers" src="" alt="">
+                <p class="descricao-personagem des-pers"></p>
                 <div class="lista-personagens lis-pers">
                     <button class="item-lista">Monkey D. Luffy</button>
                     <button class="item-lista">Zoro</button>
@@ -61,14 +54,19 @@
                     <button class="item-lista">Jimbei</button>
                 </div>
             </div>
-
         </section>
-
     </section>
-    <footer class="footer">
-        <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/">Linkedin</a>
-        <a class="github" target="_blank" href="https://github.com/EduuBraga">GitHub</a>
+
+    <footer id="footer" class="footer">
+        <p>Desenvolvido por Eduardo Braga</p>
+        <div class="midia">
+            <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/">Linkedin</a>
+            <a class="github" target="_blank" href="https://github.com/EduuBraga">GitHub</a>
+        </div>
     </footer>
+
+    <script src="./js/files.js"></script>
+    <script src="./js/personagens.js"></script>
 </body>
 
 </html>
