@@ -1,268 +1,263 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
 }
 
 @keyframes mover {
-    0% {left: 0px;right: 0px;}
-    35% {left: 10px;right: 0px;}
-    65% {left: 10px;right: 0px;}
-    100% {left: 0px;right: 50px;}
+  0% {
+    left: 0px;
+    right: 0px;
+  }
+  35% {
+    left: 10px;
+    right: 0px;
+  }
+  65% {
+    left: 10px;
+    right: 0px;
+  }
+  100% {
+    left: 0px;
+    right: 50px;
+  }
 }
 
 :root {
-    --cor-principal: #004361;
-    --cor-secundaria: #00202e;
-    --cor-terciaria: #001621;
+  --cor-principal: #004361;
+  --cor-secundaria: #00202e;
+  --cor-terciaria: #001621;
 }
 
 body {
-    background-color: var(--cor-principal);
+  background-color: var(--cor-principal);
 }
 
 section {
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* ====== Cabeçalho ===== */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-bottom: 1px solid var(--cor-terciaria);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--cor-terciaria);
 }
 
 .logo {
-    width: 50px;
-    margin: 5px;
+  width: 50px;
+  margin: 5px;
 }
 
-.nav>a {
-    font-weight: 600;
-    text-decoration: none;
+.nav > a {
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 /* ===== Home ===== */
-.item1 {grid-area: i1;}
-.item2 {grid-area: i2;}
-.item3 {grid-area: i3;}
+.item1 {
+  grid-area: i1;
+}
+.item2 {
+  grid-area: i2;
+}
+.item3 {
+  grid-area: i3;
+}
 
 #home {
-    display: grid;
-    grid-template-areas: "i2 i1 i1"
-        "i2 i3 i3";
-    margin-top: 40px;
+  display: grid;
+  grid-template-areas:
+    "i2 i1 i1"
+    "i2 i3 i3";
+  margin-top: 40px;
 }
 
 .animacao {
-    position: relative;
-    animation-name: mover;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    width: 100px;
-    margin: 30px;
+  position: relative;
+  animation-name: mover;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  width: 100px;
+  margin: 30px;
 }
 
 .titulo-home {
-    text-align: center;
-    margin-right: 50px;
-    margin-top: 5px;
+  text-align: center;
+  margin-right: 50px;
+  margin-top: 5px;
 }
 
 .artigo {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 /* =====Personagens ===== */
-.img-pers {grid-area: it1;}
-.des-pers {grid-area: it2;}
-.lis-pers {grid-area: it3;}
+.img-pers {
+  grid-area: it1;
+}
+.des-pers {
+  grid-area: it2;
+}
+.lis-pers {
+  grid-area: it3;
+}
 
 #personagens {
-    margin-top: 40px;
-    background-color: var(--cor-secundaria);
+  margin-top: 40px;
+  padding-bottom: 10px;
+  background-color: var(--cor-secundaria);
 }
 
 .titulo-personagens {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 .para-personagens {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 30px;
 }
 
 /* ====Grid Personagens */
 .box-personagens {
-    margin: auto;
-    display: grid;
-    grid-template-areas:
-        "it1 it1 it1 it1 it3"
-        "it1 it1 it1 it1 it3"
-        "it2 it2 it2 it2 it3"
-        "it2 it2 it2 it2 it3";
-    max-width: 750px;
-    background-color: var(--cor-secundaria);
-    border: 2px solid var(--cor-terciaria);
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "it1 it1 it1 it1 it3"
+    "it1 it1 it1 it1 it3"
+    "it2 it2 it2 it2 it3"
+    "it2 it2 it2 it2 it3";
+  max-width: 750px;
+  background-color: var(--cor-secundaria);
+  border: 2px solid var(--cor-terciaria);
 }
 
 .descricao-personagem {
-    padding: 10px;
+  padding: 10px;
 }
 
 .imagem-personagem {
-    width: 95%;
-    margin: 10px;
+  width: 95%;
+  margin: 10px;
 }
 
 .lista-personagens {
-    display: flex;
-    flex-direction: column;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-lista {
-    border-radius: 0px 15px 15px 0px;
-    cursor: pointer;
-    padding: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    background-color: var(--cor-principal);
-    border: 2px solid #8BC5E0;
-    transition-property: all;
-    transition-duration: 500ms;
+  cursor: pointer;
+  padding: 15px;
+  margin: 3px 0px 3px 0px;
+  font-weight: 700;
+  background-color: var(--cor-principal);
+  border: 2px solid #8bc5e0;
+  transition: all 0.3s;
 }
 
-.active{
-    background-color: var(--cor-secundaria);
-    border-left: 0px solid;
+.active {
+  background-color: var(--cor-secundaria);
+  border-left: 0px solid;
 }
 
 /* ==== Footer ===== */
 .footer {
-    margin-top: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #8BC5E0;
-    color: black;
-    font-weight: 700;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #8bc5e0;
+  color: black;
+  font-weight: 700;
 }
 
-.footer>p {
-    text-align: center;
-    margin-bottom: 10px;
-    color: black;
+.footer > p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
 }
 
 .midia {
+  display: flex;
+  justify-content: center;
+}
+.midia a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+}
+.midia img {
+  width: 30px;
+}
+.midia a:hover {
+  text-decoration: underline;
+}
+
+.midia_linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.midia_github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  /* ====Grid Personagens */
+  .box-personagens {
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "it3 it3 it3"
+      "it1 it1 it1"
+      "it2 it2 it2";
+    max-width: 750px;
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
+  }
+  .descricao-personagem {
+    padding: 10px;
+  }
+  .imagem-personagem {
+    width: 95%;
+    margin: 10px;
+  }
+  .lista-personagens {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .item-lista {
+    padding: 10px;
+    margin: 3px 5px 3px 5px;
+    font-weight: 700;
+    background-color: var(--cor-principal);
+    border: 2px solid #8bc5e0;
+    transition: all 0.3s;
+  }
+  .active {
+    background-color: var(--cor-secundaria);
+    border-bottom: 0px solid;
+  }
 }
 
-.linkedin {
-    margin-right: 30px;
-    text-decoration: none;
-    color: black;
-}
-
-.linkedin:hover {
-    text-decoration: underline;
-}
-
-.linkedin::before {
-    content: "";
-    display: inline-block;
-    background-image: url(./imagens/linkedin.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    margin: 0px 5px 0px 5px;
-}
-
-.github::before {
-    content: "";
-    display: inline-block;
-    background-image: url(./imagens/github.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    margin: 0px 5px 0px 5px;
-}
-
-.github {
-    text-decoration: none;
-    color: black;
-}
-
-.github:hover {
-    text-decoration: underline;
-}
-
-
-
-@media screen and (max-width: 350px) {
-
-    /* ====== Cabeçalho ===== */
-    .header {
-        justify-content: space-between;
-    }
-
-    .logo {
-        width: 40px;
-        margin: 5px;
-    }
-
-    .nav>a {
-        font-size: 15px;
-    }
-
-    .nav {
-        gap: 10px;
-        margin-right: 10px;
-    }
-
-    /* ===== Home ===== */
-    #home {
-        grid-template-areas:
-            "i2 i2 i1"
-            "i2 i2 i3";
-        background-image: url(./imagens/back.png);
-        background-size: cover;
-    }
-
-    .animacao {
-        display: none;
-    }
-
-    .titulo-home {
-        margin: 10px 0px 5px 0px;
-    }
-
-    .artigo {
-        padding-bottom: 10px;
-        margin-left: 30px;
-    }
-
-    /* ====Grid Personagens */
-    .lista-personagens {
-        margin-left: 5px;
-    }
-
-    .item-lista {
-        padding: 5px;
-    }
+@media screen and (max-width: 425px) {
 }
