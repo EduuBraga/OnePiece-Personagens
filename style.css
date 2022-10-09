@@ -145,7 +145,7 @@ section {
     transition-duration: 500ms;
 }
 
-.item-lista:focus, .item-lista:active {
+.active{
     background-color: var(--cor-secundaria);
     border-left: 0px solid;
 }

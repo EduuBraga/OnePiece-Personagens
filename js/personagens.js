@@ -1,5 +1,4 @@
 // =====Objeto contendo os elementos do personagem
-
 window.perso = {
     imagemPerso: document.querySelector(".imagem-personagem"),
     descricaoPerso: document.querySelector(".descricao-personagem"),
@@ -13,7 +12,6 @@ window.perso = {
         perso.descricaoPerso.innerText = perso.filesPerso[perso.ctgPerso].descricao
     }
 }
-
 perso.persoStart()
 
 // ====Evento atribuído aos botões para mudar a imagem e a descrição dos personagens
@@ -27,3 +25,16 @@ for (let i = 0; perso.filesPerso.length > i; i++) {
     })
 }
 
+
+const listaPersonagens = document.querySelectorAll(".item-lista")
+
+listaPersonagens.forEach(button => {
+    button.addEventListener('click', () => {
+        const buttonActive = document.querySelector(".active")
+
+        if(buttonActive){
+            buttonActive.classList.remove('active')
+        }
+        button.classList.add('active')
+    })
+})
