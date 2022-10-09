@@ -5,23 +5,21 @@
   color: white;
   font-family: "Courier New", Courier, monospace;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 @keyframes mover {
   0% {
     left: 0px;
-    right: 0px;
-  }
-  35% {
-    left: 10px;
-    right: 0px;
-  }
-  65% {
-    left: 10px;
-    right: 0px;
-  }
-  100% {
+  }25% {
+    left: 20px;
+  }50% {
     left: 0px;
-    right: 50px;
+  }70% {
+    left: -20px;
+  }100% {
+    left: 0px;
   }
 }
 
@@ -44,13 +42,13 @@ section {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid var(--cor-terciaria);
 }
 
 .logo {
   width: 50px;
-  margin: 5px;
+  margin: 5px 5px 5px 15px;
 }
 
 .nav > a {
@@ -61,6 +59,7 @@ section {
 .nav {
   display: flex;
   gap: 20px;
+  margin-right:15px;
 }
 
 /* ===== Home ===== */
@@ -82,11 +81,9 @@ section {
   margin-top: 40px;
 }
 
-.animacao {
+.img_home {
   position: relative;
-  animation-name: mover;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
+  animation: mover 5s linear infinite;
   width: 100px;
   margin: 30px;
 }
@@ -230,21 +227,14 @@ section {
     background-color: var(--cor-secundaria);
     border: 2px solid var(--cor-terciaria);
   }
-  .descricao-personagem {
-    padding: 10px;
-  }
-  .imagem-personagem {
-    width: 95%;
-    margin: 10px;
-  }
   .lista-personagens {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     overflow-x: scroll;
-    padding: 0px 5px 0px 5px;
+    padding: 5px;
+    margin: 0px 5px 0px 5px;
   }
-
   .item-lista {
     padding: 10px;
     margin: 3px 5px 3px 5px;
@@ -257,7 +247,25 @@ section {
     background-color: var(--cor-secundaria);
     border-bottom: 0px solid;
   }
-}
 
-@media screen and (max-width: 425px) {
+  /* === HOME === */
+  #home {
+    display: grid;
+    grid-template-areas:
+      "i1 i1 i1"
+      "i3 i3 i3";
+    margin-top: 40px;
+  }
+  .img_home {
+    display: none;
+  }
+  .titulo-home {
+    text-align: center;
+    margin-right: 0px;
+    margin-top: 5px;
+  }
+  .artigo {
+    padding: 10px;
+    margin-right: 0px;
+  }
 }
